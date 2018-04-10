@@ -35,6 +35,6 @@ node {
     }
     
     stage('Run image') {
-docker.image('singhtanmay786/hellonode').withRun('-p 4503:8000')
+docker.image('singhtanmay786/hellonode').run('-p 4503:8000')
     }       
 }
