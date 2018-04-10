@@ -39,5 +39,5 @@ node {
         def tan = docker.image("singhtanmay786/hellonode")
         
        tan.pull()
-        
+    }       
 }
