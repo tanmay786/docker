@@ -33,4 +33,11 @@ node {
             app.push("latest")
         }
     }
+    
+    stage('Pull image') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials')
+        def tan = docker.image("singhtanmay786/hellonode")
+        
+       tan.pull()
+        
 }
