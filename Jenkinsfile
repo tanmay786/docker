@@ -34,10 +34,7 @@ node {
         }
     }
     
-    stage('Pull image') {
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials')
-        def tan = docker.image("singhtanmay786/hellonode")
-        
-       tan.pull()
+    stage('Run image') {
+docker.image('singhtanmay786/hellonode').withRun('-p 4503:8000')
     }       
 }
